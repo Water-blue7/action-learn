@@ -1,12 +1,25 @@
+name: 部署在github page中
 on: push
 
+permissions:
+    contents: write
+
 jobs:
-    job1:
+    npm-build:
+        name: npm-build部署
         runs-on: ubuntu-latest
+
         steps:
-        - run: pwd
-        - run: ls
-    job3:
-        runs-on: windows-latest
-        steps:
-        - run: node --version
+        - name: 读取仓库内容
+          uses: actions/checkout@v4
+
+        - name: 安装依赖和项目打包
+          run: |
+            cd build
+            npm install
+
+        - name: 部署
+          uses: JamesIves/github-pages-deploy-action@v4
+          with:
+            branch: gh-pages
+            folder: build
