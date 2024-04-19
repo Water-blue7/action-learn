@@ -1,0 +1,27 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+
+}
+
+#time {
+    position: relative;
+    font-size: 500%;
+    text-align: center;
+    top: 35%;
+    background: url();
+}
+
+#time_diff {
+    background-color: antiquewhite;
+}
+
+#formatSecond {
+    background-color: aquamarine;
+}
