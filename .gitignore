@@ -1,0 +1,3 @@
+# 忽略node_modules文件夹下的所有文件，因为这里面有太多文件了，而且npm i就可以把这些文件下载下来
+node_modules/
+test/
